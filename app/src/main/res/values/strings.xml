@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Shaadi</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="accepted">Profile Accepted</string>
+    <string name="rejected">Profile Rejected</string>
+    <string name="loading">Loading...</string>
+
+</resources>

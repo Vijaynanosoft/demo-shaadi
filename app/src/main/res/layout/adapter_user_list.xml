@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImgProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dimen_10dp"
+            app:cardElevation="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_accept_reject_status"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/txtUserName"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtAge"
+            app:layout_constraintLeft_toRightOf="@+id/cvImgProfile"
+            app:layout_constraintRight_toLeftOf="@+id/img_accept"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="user" />
+
+        <TextView
+            android:id="@+id/txtAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/txtUserName"
+            app:layout_constraintRight_toRightOf="@+id/txtUserName"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserName"
+            tools:text="21" />
+
+        <ImageView
+            android:id="@+id/img_accept"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/check"
+            app:layout_constraintBottom_toTopOf="@+id/tv_accept"
+            app:layout_constraintLeft_toRightOf="@+id/txtUserName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_6dp"
+            android:text="@string/accept"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/img_decline"
+            app:layout_constraintEnd_toEndOf="@+id/img_accept"
+            app:layout_constraintLeft_toLeftOf="@+id/img_accept"
+            app:layout_constraintTop_toBottomOf="@+id/img_accept" />
+
+        <ImageView
+            android:id="@+id/img_decline"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/cancel"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_decline"
+            app:layout_constraintLeft_toRightOf="@+id/txtUserName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_accept" />
+
+        <TextView
+            android:id="@+id/tv_decline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/decline"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/img_decline"
+            app:layout_constraintLeft_toLeftOf="@+id/img_decline"
+            app:layout_constraintTop_toBottomOf="@+id/img_decline" />
+
+        <TextView
+            android:id="@+id/tv_accept_reject_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvImgProfile"
+            tools:text="Profile Accepted or Rejected" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grpAcceptAndDeclineButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="img_accept,img_decline,tv_decline,tv_accept" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
